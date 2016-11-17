@@ -69,9 +69,9 @@ class RollCmd_ToolsLandTest < Test::Unit::TestCase
   def test_should_no_change_when_no_space_to_buy_tool
     @player.set_statu Status::WAIT_FOR_TOOL_RESPONSE
     @player.set_point TestHelper::ENOUGH_POINT
-    for i in 0...@player.max_tools_num
+    (0...@player.max_tools_num).each { |i|
       @player.command @player.chose_one
-    end
+    }
     point = @player.point
     tools_num = @player.tools_num
 

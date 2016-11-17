@@ -63,9 +63,9 @@ class RollCmd_OwnLandTest < Test::Unit::TestCase
   def test_should_no_change_when_level_is_max
     @player.set_statu Status::WAIT_FOR_UPGRADE_RESPONSE
     @player.set_money TestHelper::ENOUGH_MONEY
-    for i in 0...@empty_land.max_level
+    (0...@empty_land.max_level).each { |i|
       @empty_land.level_up
-    end
+    }
     level = @empty_land.level
 
     @player.command @player.say_yes

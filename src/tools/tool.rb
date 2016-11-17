@@ -1,4 +1,3 @@
-
 class Tool
 
   CHEAPEST = 30
@@ -24,8 +23,14 @@ class Tool
     @num = num
   end
 
-  def use(player,step)
-
+  def use(player, step)
+    place = player.game_map.place(player.position + step)
+    not_far = (step < 11 and step > -11)
+    place_empty = (place.player.nil? and place.tool.nil?)
+    if num > 0 and place_empty and not_far
+      @num -= 1
+      place.set_tool self
+    end
   end
 
 end
