@@ -1,8 +1,10 @@
-require_relative 'status'
 
-class WAIT_FOR_CMD < Status
+class WAIT_FOR_CMD
+
 
 
 end
+
+
 
 

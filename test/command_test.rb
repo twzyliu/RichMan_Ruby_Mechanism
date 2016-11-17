@@ -1,51 +1,41 @@
 require 'test/unit'
 require 'flexmock/test_unit'
 require 'test/unit/ui/console/testrunner'
-require_relative '../src/status/wait_for_cmd'
 require_relative '../src/player'
-require_relative '../src/command/command'
-require_relative '../src/response/response'
+require_relative '../src/commands/command'
+require_relative '../src/responses/responses'
+require_relative '../src/status/status'
+require_relative '../src/game_map'
+
 
 class Command_Test < Test::Unit::TestCase
 
   def setup
-    @command = Command.new
-    @player = Player.new
-    @response = Response.new
+    @player = Player.new flexmock(GameMap)
   end
 
   def test_should_return_wait_for_cmd_after_respondless_cmd
-    flexmock(@command, :execute => :WAIT_FOR_CMD)
+    flexmock(Command, :execute => Status::WAIT_FOR_CMD)
 
-    status = @player.command @command
-
-    assert_equal :WAIT_FOR_CMD, status
+    assert_equal Status::WAIT_FOR_CMD, (@player.command Command)
   end
 
   def test_should_return_wait_for_response_after_respondful_cmd
-    flexmock(@command, :execute => :WAIT_FOR_RESPONSE)
+    flexmock(Command, :execute => Status::WAIT_FOR_BUY_RESPONSE)
 
-    status = @player.command @command
-
-    assert_equal :WAIT_FOR_RESPONSE, status
+    assert_equal Status::WAIT_FOR_BUY_RESPONSE, (@player.command Command)
   end
 
   def test_should_return_turn_end_after_after_noneed_respond_cmd
-    flexmock(@command, :execute => :TURN_END)
+    flexmock(Command, :execute => Status::TURN_END)
 
-    status = @player.command @command
-
-    assert_equal :TURN_END, status
+    assert_equal Status::TURN_END, (@player.command Command)
   end
 
   def test_should_return_turn_end_after_respond
-    flexmock(@response, :execute => :TURN_END)
+    flexmock(Responses, :execute => Status::TURN_END)
 
-    status = @player.command @response
-
-    assert_equal :TURN_END, status
+    assert_equal Status::TURN_END, (@player.command Responses)
   end
 
 end
-
-Test::Unit::UI::Console::TestRunner.run(Command_Test)
