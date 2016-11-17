@@ -1,12 +1,8 @@
 require_relative '../status/status'
 require_relative '../../src/player'
+require_relative 'response'
 
-class SAY_YES_TO_BUY
-
-  def set_player(player)
-    @player = player
-    self
-  end
+class SAY_YES_TO_BUY < Response
 
   def execute
     place = @player.place

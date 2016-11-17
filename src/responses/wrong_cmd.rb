@@ -1,13 +1,9 @@
+require_relative 'response'
 
-
-class WRONG_CMD
-
-  def set_player(player)
-    @player = player
-    self
-  end
+class WRONG_CMD < Response
 
   def execute
     @player.statu
   end
+
 end

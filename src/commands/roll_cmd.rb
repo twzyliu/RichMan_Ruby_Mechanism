@@ -1,20 +1,12 @@
 require_relative '../status/status'
+require_relative 'commands'
 require_relative 'command'
 
-class RollCmd
-
-  def set_player(player)
-    @player = player
-    self
-  end
+class RollCmd < Command
 
   def execute
     place = @player.place
-    if place.owner.nil?
-      Status::WAIT_FOR_BUY_RESPONSE
-    elsif place.owner == @player
-      Status::WAIT_FOR_UPGRADE_RESPONSE
-    end
+    place.change_statu @player
   end
 
 end

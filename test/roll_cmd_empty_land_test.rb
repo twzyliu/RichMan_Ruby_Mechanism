@@ -3,7 +3,7 @@ require 'flexmock/test_unit'
 require 'test/unit/ui/console/testrunner'
 require_relative 'test_helper'
 require_relative '../src/status/status'
-require_relative '../src/commands/command'
+require_relative '../src/commands/commands'
 require_relative '../src/player'
 require_relative '../src/places/empty_land'
 require_relative '../src/game_map'
@@ -20,7 +20,7 @@ class RollCmd_EmptyLandTest < Test::Unit::TestCase
   def test_should_wait_for_buy_response_after_roll_to_emptyland
     @player.set_statu Status::WAIT_FOR_CMD
 
-    assert_equal Status::WAIT_FOR_BUY_RESPONSE, (@player.command (Command::ROLL_CMD.set_player @player))
+    assert_equal Status::WAIT_FOR_BUY_RESPONSE, (@player.command (Commands::ROLL_CMD.set_player @player))
   end
 
 

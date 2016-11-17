@@ -1,12 +1,8 @@
 require_relative '../status/status'
 require_relative '../player'
+require_relative 'response'
 
-class SAY_YES_TO_UPGRADE
-
-  def set_player(player)
-    @player = player
-    self
-  end
+class SAY_YES_TO_UPGRADE < Response
 
   def execute
     place = @player.place

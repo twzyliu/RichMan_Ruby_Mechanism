@@ -1,10 +1,12 @@
-require_relative 'commands/command'
+require_relative 'commands/commands'
 
 class Player
 
   def initialize(game_map)
     @money = 0
+    @point = 0
     @position = 0
+    @god_days = 0
     @game_map = game_map
     @places = []
   end
@@ -29,12 +31,32 @@ class Player
     @statu.say_no
   end
 
+  def chose_one
+    @statu.chose_one
+  end
+
+  def chose_two
+    @statu.chose_two
+  end
+
+  def chose_three
+    @statu.chose_three
+  end
+
   def money
     @money
   end
 
   def set_money(money)
     @money = money
+  end
+
+  def point
+    @point
+  end
+
+  def set_point(point)
+    @point = point
   end
 
   def game_map
@@ -59,6 +81,14 @@ class Player
 
   def place
     game_map.get_place position
+  end
+
+  def god_days
+    @god_days
+  end
+
+  def set_god_days(god_days)
+    @god_days = god_days
   end
 
 end

@@ -1,4 +1,5 @@
 require_relative 'place'
+require_relative '../status/status'
 
 class EmptyLand < Place
 
@@ -31,6 +32,14 @@ class EmptyLand < Place
 
   def max_level
     MAX_LEVEL
+  end
+
+  def change_statu(player)
+    if owner.nil?
+      Status::WAIT_FOR_BUY_RESPONSE
+    elsif owner == player
+      Status::WAIT_FOR_UPGRADE_RESPONSE
+    end
   end
 
 end
