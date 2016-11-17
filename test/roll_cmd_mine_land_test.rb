@@ -13,7 +13,7 @@ class RollCmd_MineLandTest < Test::Unit::TestCase
   def setup
     @player = Player.new flexmock(GameMap)
     @mine_land = MineLand.new TestHelper::MINE_POINT
-    flexmock(GameMap, :get_place => @mine_land)
+    flexmock(GameMap, :place => @mine_land)
   end
 
   def test_should_turn_end_after_roll_to_mineland

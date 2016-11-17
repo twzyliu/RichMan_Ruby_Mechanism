@@ -11,7 +11,7 @@ class RollCmd_StartingPointTest < Test::Unit::TestCase
   def setup
     @player = Player.new flexmock(GameMap)
     @starting_point = StartingPoint.new
-    flexmock(GameMap, :get_place => @starting_point)
+    flexmock(GameMap, :place => @starting_point)
   end
 
   def test_should_turn_end_after_roll_to_startingpoint

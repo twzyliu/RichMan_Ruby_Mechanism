@@ -13,7 +13,7 @@ class RollCmd_OthersLandTest < Test::Unit::TestCase
     @other = Player.new flexmock(GameMap)
     @others_land = EmptyLand.new TestHelper::LAND_PRICE
     @others_land.set_owner (@other)
-    flexmock(GameMap, :get_place => @others_land)
+    flexmock(GameMap, :place => @others_land)
   end
 
   def test_should_turn_end_after_roll_to_other

@@ -11,7 +11,7 @@ class RollCmd_MagicLandTest < Test::Unit::TestCase
   def setup
     @player = Player.new flexmock(GameMap)
     @magic_land = MagicLand.new
-    flexmock(GameMap, :get_place => @magic_land)
+    flexmock(GameMap, :place => @magic_land)
   end
 
   def test_should_turn_end_after_roll_to_magicland

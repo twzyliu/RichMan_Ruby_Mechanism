@@ -1,7 +1,7 @@
 
 class GameMap
 
-  def get_place
+  def place
 
   end
 

@@ -11,7 +11,7 @@ class RollCmd_PrisonTest < Test::Unit::TestCase
   def setup
     @player = Player.new flexmock(GameMap)
     @prison = Prison.new
-    flexmock(GameMap, :get_place => @prison)
+    flexmock(GameMap, :place => @prison)
   end
 
   def test_should_turn_end_after_roll_to_prison

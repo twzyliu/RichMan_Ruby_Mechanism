@@ -11,7 +11,7 @@ class RollCmd_GiftLandTest < Test::Unit::TestCase
   def setup
     @player = Player.new flexmock(GameMap)
     @gift_land = GiftLand.new
-    flexmock(GameMap, :get_place => @gift_land)
+    flexmock(GameMap, :place => @gift_land)
   end
 
   def test_should_wait_for_gift_response_after_roll_to_giftland

@@ -94,7 +94,7 @@ class Player
   end
 
   def place
-    game_map.get_place position
+    game_map.place position
   end
 
   def god_days

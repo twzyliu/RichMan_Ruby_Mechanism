@@ -24,4 +24,8 @@ class Tool
     @num = num
   end
 
+  def use(player,step)
+
+  end
+
 end

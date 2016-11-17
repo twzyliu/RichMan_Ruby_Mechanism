@@ -11,7 +11,7 @@ class RollCmd_HospitalTest < Test::Unit::TestCase
   def setup
     @player = Player.new flexmock(GameMap)
     @hospital = Hospital.new
-    flexmock(GameMap, :get_place => @hospital)
+    flexmock(GameMap, :place => @hospital)
   end
 
   def test_should_turn_end_after_roll_to_hospital

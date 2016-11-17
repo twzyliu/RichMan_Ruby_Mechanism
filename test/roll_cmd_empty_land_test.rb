@@ -14,7 +14,7 @@ class RollCmd_EmptyLandTest < Test::Unit::TestCase
   def setup
     @player = Player.new flexmock(GameMap)
     @empty_land = EmptyLand.new TestHelper::LAND_PRICE
-    flexmock(GameMap, :get_place => @empty_land)
+    flexmock(GameMap, :place => @empty_land)
   end
 
   def test_should_wait_for_buy_response_after_roll_to_emptyland

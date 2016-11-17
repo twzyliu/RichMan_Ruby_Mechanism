@@ -5,5 +5,8 @@ module TestHelper
   ENOUGH_POINT = 99999
   LAND_PRICE = 200
   MINE_POINT = 20
+  TOOL_STEP = 1
+  ENOUGH_TOOLS = 5
+  LONG_STEP = 20
 
 end

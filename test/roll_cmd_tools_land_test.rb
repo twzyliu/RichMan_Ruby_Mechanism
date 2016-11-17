@@ -13,7 +13,7 @@ class RollCmd_ToolsLandTest < Test::Unit::TestCase
   def setup
     @player = Player.new flexmock(GameMap)
     @tools_land = ToolsLand.new
-    flexmock(GameMap, :get_place => @tools_land)
+    flexmock(GameMap, :place => @tools_land)
   end
 
   def test_should_wait_for_tool_response_after_roll_to_toolland

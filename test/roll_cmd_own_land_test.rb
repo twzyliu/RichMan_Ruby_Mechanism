@@ -11,7 +11,7 @@ class RollCmd_OwnLandTest < Test::Unit::TestCase
     @player = Player.new flexmock(GameMap)
     @empty_land = EmptyLand.new TestHelper::LAND_PRICE
     @empty_land.set_owner @player
-    flexmock(GameMap, :get_place => @empty_land)
+    flexmock(GameMap, :place => @empty_land)
   end
 
   def test_should_wait_for_upgrade_response_after_roll_to_Ownland
