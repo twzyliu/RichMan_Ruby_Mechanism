@@ -17,7 +17,7 @@ class RollCmd_HospitalTest < Test::Unit::TestCase
   def test_should_turn_end_after_roll_to_hospital
     @player.set_statu Status::WAIT_FOR_CMD
 
-    assert_equal Status::TURN_END, (@player.command (Commands::ROLL_CMD.set_player @player))
+    assert_equal Status::TURN_END, (@player.command Commands::ROLL_CMD)
   end
 
 end

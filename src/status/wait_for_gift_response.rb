@@ -2,7 +2,7 @@ require_relative '../../src/responses/responses'
 
 class WAIT_FOR_GIFT_RESPONSE
 
-  def wrong_cmd(player)
+  def wrong_cmd
     Responses::WRONG_CMD_TO_GIFT
   end
 

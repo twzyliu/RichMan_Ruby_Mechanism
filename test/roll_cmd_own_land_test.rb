@@ -17,7 +17,7 @@ class RollCmd_OwnLandTest < Test::Unit::TestCase
   def test_should_wait_for_upgrade_response_after_roll_to_Ownland
     @player.set_statu Status::WAIT_FOR_CMD
 
-    assert_equal Status::WAIT_FOR_UPGRADE_RESPONSE, (@player.command (Commands::ROLL_CMD.set_player @player))
+    assert_equal Status::WAIT_FOR_UPGRADE_RESPONSE, (@player.command Commands::ROLL_CMD)
   end
 
   def test_should_turn_end_after_sayYes
@@ -63,11 +63,14 @@ class RollCmd_OwnLandTest < Test::Unit::TestCase
   def test_should_no_change_when_level_is_max
     @player.set_statu Status::WAIT_FOR_UPGRADE_RESPONSE
     @player.set_money TestHelper::ENOUGH_MONEY
-    for i in 0..@empty_land.max_level
+    for i in 0...@empty_land.max_level
       @empty_land.level_up
     end
+    level = @empty_land.level
 
-    assert_equal Status::WAIT_FOR_UPGRADE_RESPONSE, (@player.command @player.say_yes)
+    @player.command @player.say_yes
+
+    assert_equal level, @empty_land.level
   end
 
   def test_should_no_change_when_no_enough_money

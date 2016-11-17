@@ -1,6 +1,11 @@
 require_relative 'commands/commands'
+require_relative 'tools/barricade'
+require_relative 'tools/robot'
+require_relative 'tools/bomb'
 
 class Player
+
+  MAX_TOOLS_NUM = 10
 
   def initialize(game_map)
     @money = 0
@@ -10,10 +15,14 @@ class Player
     @prison_days = 0
     @game_map = game_map
     @places = []
+    @barricade = Barricade.new
+    @robot = Robot.new
+    @bomb = Bomb.new
+
   end
 
   def command(command)
-    command.execute
+    (command.set_player self).execute
   end
 
   def statu
@@ -25,7 +34,7 @@ class Player
   end
 
   def say_yes
-    @statu.say_yes(self)
+    @statu.say_yes
   end
 
   def say_no
@@ -77,7 +86,11 @@ class Player
   end
 
   def wrong_cmd
-    @statu.wrong_cmd(self)
+    @statu.wrong_cmd
+  end
+
+  def exit_cmd
+    @statu.exit_cmd
   end
 
   def place
@@ -99,5 +112,28 @@ class Player
   def goto_prison
     @prison_days += place.prison_days
   end
+
+  def tools_num
+    @barricade.num + @robot.num + @bomb.num
+  end
+
+  def barricade
+    @barricade
+  end
+
+  def robot
+    @robot
+  end
+
+  def bomb
+    @bomb
+  end
+
+  def max_tools_num
+    MAX_TOOLS_NUM
+  end
+
+
+
 
 end

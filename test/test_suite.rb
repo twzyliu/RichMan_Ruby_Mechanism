@@ -9,6 +9,7 @@ require_relative 'roll_cmd_magic_land_test'
 require_relative 'roll_cmd_hospital_test'
 require_relative 'roll_cmd_prison_test'
 require_relative 'roll_cmd_mine_land_test'
+require_relative 'roll_cmd_tools_land_test'
 
 class Test_Suite
   def self.suite
@@ -23,6 +24,7 @@ class Test_Suite
     suite << RollCmd_HospitalTest.suite
     suite << RollCmd_PrisonTest.suite
     suite << RollCmd_MineLandTest.suite
+    suite << RollCmd_ToolsLandTest.suite
     return suite
   end
 end

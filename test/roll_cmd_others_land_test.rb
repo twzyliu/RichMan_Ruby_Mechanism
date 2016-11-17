@@ -20,7 +20,7 @@ class RollCmd_OthersLandTest < Test::Unit::TestCase
     @player.set_statu Status::WAIT_FOR_CMD
     @player.set_money TestHelper::ENOUGH_MONEY
 
-    assert_equal Status::TURN_END, (@player.command (Commands::ROLL_CMD.set_player @player))
+    assert_equal Status::TURN_END, (@player.command Commands::ROLL_CMD)
   end
 
   def test_should_change_my_money_after_roll_to_other
@@ -28,7 +28,7 @@ class RollCmd_OthersLandTest < Test::Unit::TestCase
     @player.set_money TestHelper::ENOUGH_MONEY
     money = @player.money
 
-    @player.command (Commands::ROLL_CMD.set_player @player)
+    @player.command Commands::ROLL_CMD
 
     assert_equal money - @others_land.bill, @player.money
   end
@@ -38,7 +38,7 @@ class RollCmd_OthersLandTest < Test::Unit::TestCase
     @player.set_money TestHelper::ENOUGH_MONEY
     money = @other.money
 
-    @player.command (Commands::ROLL_CMD.set_player @player)
+    @player.command Commands::ROLL_CMD
 
     assert_equal money + @others_land.bill, @other.money
   end
@@ -46,7 +46,7 @@ class RollCmd_OthersLandTest < Test::Unit::TestCase
   def test_should_gameover_when_no_enough_money_to_pay
     @player.set_statu Status::WAIT_FOR_CMD
 
-    assert_equal Status::GAME_OVER, (@player.command (Commands::ROLL_CMD.set_player @player))
+    assert_equal Status::GAME_OVER, (@player.command Commands::ROLL_CMD)
   end
 
 end

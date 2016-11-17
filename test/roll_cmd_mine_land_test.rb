@@ -19,14 +19,14 @@ class RollCmd_MineLandTest < Test::Unit::TestCase
   def test_should_turn_end_after_roll_to_mineland
     @player.set_statu Status::WAIT_FOR_CMD
 
-    assert_equal Status::TURN_END, (@player.command (Commands::ROLL_CMD.set_player @player))
+    assert_equal Status::TURN_END, (@player.command Commands::ROLL_CMD)
   end
 
   def test_should_gain_potin_after_roll_to_mineland
     @player.set_statu Status::WAIT_FOR_CMD
     point = @player.point
 
-    @player.command (Commands::ROLL_CMD.set_player @player)
+    @player.command Commands::ROLL_CMD
 
     assert_equal point + @mine_land.point, @player.point
   end

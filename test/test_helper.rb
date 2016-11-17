@@ -2,6 +2,7 @@
 module TestHelper
 
   ENOUGH_MONEY = 99999
+  ENOUGH_POINT = 99999
   LAND_PRICE = 200
   MINE_POINT = 20
 

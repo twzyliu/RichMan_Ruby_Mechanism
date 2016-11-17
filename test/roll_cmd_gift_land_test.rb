@@ -17,7 +17,7 @@ class RollCmd_GiftLandTest < Test::Unit::TestCase
   def test_should_wait_for_gift_response_after_roll_to_giftland
     @player.set_statu Status::WAIT_FOR_CMD
 
-    assert_equal Status::WAIT_FOR_GIFT_RESPONSE, (@player.command (Commands::ROLL_CMD.set_player @player))
+    assert_equal Status::WAIT_FOR_GIFT_RESPONSE, (@player.command Commands::ROLL_CMD)
   end
 
   def test_should_turn_end_after_wrong_cmd
@@ -30,7 +30,7 @@ class RollCmd_GiftLandTest < Test::Unit::TestCase
     @player.set_statu Status::WAIT_FOR_GIFT_RESPONSE
     money = @player.money
 
-    @player.command (@player.chose_one.set_player @player)
+    @player.command @player.chose_one
 
     assert_equal money + @gift_land.gift_money, @player.money
   end
@@ -39,7 +39,7 @@ class RollCmd_GiftLandTest < Test::Unit::TestCase
     @player.set_statu Status::WAIT_FOR_GIFT_RESPONSE
     point = @player.point
 
-    @player.command (@player.chose_two.set_player @player)
+    @player.command @player.chose_two
 
     assert_equal point + @gift_land.gift_point, @player.point
   end
@@ -47,7 +47,7 @@ class RollCmd_GiftLandTest < Test::Unit::TestCase
   def test_should_get_god_after_chose_3
     @player.set_statu Status::WAIT_FOR_GIFT_RESPONSE
 
-    @player.command (@player.chose_three.set_player @player)
+    @player.command @player.chose_three
 
     assert_equal @gift_land.gift_god, @player.god_days
   end

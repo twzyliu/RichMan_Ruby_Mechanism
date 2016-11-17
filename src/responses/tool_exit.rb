@@ -1,5 +1,5 @@
 require_relative 'response'
 
-class SAY_NO < Response
+class TOOL_EXIT < Response
 
 end
