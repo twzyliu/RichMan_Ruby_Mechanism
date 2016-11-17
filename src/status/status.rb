@@ -3,7 +3,8 @@ require_relative 'wait_for_cmd'
 require_relative 'turn_end'
 require_relative 'wait_for_buy_response'
 require_relative 'wait_for_upgrade_response'
-require_relative '../../src/status/wait_for_gift_response'
+require_relative 'wait_for_gift_response'
+require_relative 'game_over'
 
 module Status
 
@@ -12,5 +13,6 @@ module Status
   WAIT_FOR_BUY_RESPONSE = WAIT_FOR_BUY_RESPONSE.new
   WAIT_FOR_UPGRADE_RESPONSE = WAIT_FOR_UPGRADE_RESPONSE.new
   WAIT_FOR_GIFT_RESPONSE = WAIT_FOR_GIFT_RESPONSE.new
+  GAME_OVER = GAME_OVER.new
 
 end

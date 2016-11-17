@@ -39,7 +39,19 @@ class EmptyLand < Place
       Status::WAIT_FOR_BUY_RESPONSE
     elsif owner == player
       Status::WAIT_FOR_UPGRADE_RESPONSE
+    else
+      player.set_money (player.money - bill)
+      owner.set_money (owner.money + bill)
+      if player.money < 0
+        Status::GAME_OVER
+      else
+        Status::TURN_END
+      end
     end
+  end
+
+  def bill
+    ( 2 ** level ) * price / 2
   end
 
 end

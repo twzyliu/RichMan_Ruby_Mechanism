@@ -3,6 +3,8 @@ require_relative 'command_test'
 require_relative 'roll_cmd_empty_land_test'
 require_relative 'roll_cmd_own_land_test'
 require_relative 'roll_cmd_gift_land_test'
+require_relative 'roll_cmd_starting_point_test'
+require_relative 'roll_cmd_others_land_test'
 
 class Test_Suite
   def self.suite
@@ -11,6 +13,8 @@ class Test_Suite
     suite << RollCmd_EmptyLandTest.suite
     suite << RollCmd_OwnLandTest.suite
     suite << RollCmd_GiftLandTest.suite
+    suite << RollCmd_StartingPointTest.suite
+    suite << RollCmd_OthersLandTest.suite
     return suite
   end
 end
