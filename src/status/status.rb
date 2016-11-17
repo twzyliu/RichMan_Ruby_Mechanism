@@ -6,6 +6,7 @@ require_relative 'wait_for_upgrade_response'
 require_relative 'wait_for_gift_response'
 require_relative 'game_over'
 require_relative 'wait_for_tool_response'
+require_relative 'exit'
 
 module Status
 
@@ -16,5 +17,6 @@ module Status
   WAIT_FOR_GIFT_RESPONSE = WAIT_FOR_GIFT_RESPONSE.new
   GAME_OVER = GAME_OVER.new
   WAIT_FOR_TOOL_RESPONSE = WAIT_FOR_TOOL_RESPONSE.new
+  EXIT = EXIT.new
 
 end

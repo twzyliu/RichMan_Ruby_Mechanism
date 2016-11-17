@@ -8,5 +8,6 @@ module TestHelper
   TOOL_STEP = 1
   ENOUGH_TOOLS = 5
   LONG_STEP = 20
+  SELL_NUM = 1
 
 end

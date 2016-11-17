@@ -17,7 +17,7 @@ class RobotCmdTest < Test::Unit::TestCase
   def test_should_wait_for_cmd_after_robot
     @player.set_statu Status::WAIT_FOR_CMD
 
-    assert_equal Status::WAIT_FOR_CMD, (@player.command Commands::RobotCmd)
+    assert_equal Status::WAIT_FOR_CMD, (@player.command Commands::ROBOT_CMD)
   end
 
   def test_should_change_toolnum_when_robot
@@ -25,7 +25,7 @@ class RobotCmdTest < Test::Unit::TestCase
     @player.robot.set_num TestHelper::ENOUGH_TOOLS
     tools_num = @player.tools_num
 
-    @player.command Commands::RobotCmd
+    @player.command Commands::ROBOT_CMD
 
     assert_equal tools_num - 1, @player.tools_num
   end
@@ -34,7 +34,7 @@ class RobotCmdTest < Test::Unit::TestCase
     @player.set_statu Status::WAIT_FOR_CMD
     tools_num = @player.tools_num
 
-    @player.command Commands::RobotCmd
+    @player.command Commands::ROBOT_CMD
 
     assert_equal tools_num, @player.tools_num
   end
@@ -44,7 +44,7 @@ class RobotCmdTest < Test::Unit::TestCase
     @player.robot.set_num TestHelper::ENOUGH_TOOLS
     @place.set_tool @player.bomb
 
-    @player.command Commands::RobotCmd
+    @player.command Commands::ROBOT_CMD
 
     assert_equal true, @place.tool.nil?
   end

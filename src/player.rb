@@ -18,6 +18,7 @@ class Player
     @barricade = Barricade.new
     @robot = Robot.new
     @bomb = Bomb.new
+    @tools = [ @barricade, @robot, @bomb ]
 
   end
 
@@ -131,6 +132,10 @@ class Player
 
   def max_tools_num
     MAX_TOOLS_NUM
+  end
+
+  def tools
+    @tools
   end
 
 

@@ -13,6 +13,11 @@ require_relative 'roll_cmd_tools_land_test'
 require_relative 'block_cmd_test'
 require_relative 'bomb_cmd_test'
 require_relative 'robot_cmd_test'
+require_relative 'sell_cmd_test'
+require_relative 'selltool_cmd_test'
+require_relative 'query_cmd_test'
+require_relative 'help_cmd_test'
+require_relative 'quit_cmd_test'
 
 class Test_Suite
   def self.suite
@@ -31,6 +36,11 @@ class Test_Suite
     suite << BlockCmdTest.suite
     suite << BombCmdTest.suite
     suite << RobotCmdTest.suite
+    suite << SellCmdTest.suite
+    suite << SelltoolCmdTest.suite
+    suite << QueryCmdTest.suite
+    suite << HelpCmdTest.suite
+    suite << QuitCmdTest.suite
     return suite
   end
 end

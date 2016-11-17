@@ -54,4 +54,9 @@ class EmptyLand < Place
     ( 2 ** level ) * price / 2
   end
 
+  def selled
+    @owner = nil
+    @level = 0
+  end
+
 end
