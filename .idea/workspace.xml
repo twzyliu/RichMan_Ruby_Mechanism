@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7f2d22e-fab5-4f88-af36-32a9809f9f3c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game_map.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/places/empty_land.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/places/place.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/responses/responses.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/responses/say_no.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/responses/say_yes_to_buy.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/responses/wrong_cmd.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/status/turn_end.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/status/wait_for_buy_response.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_suite.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/response/response.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/status/wait_for_response.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/command/command.rb" afterPath="$PROJECT_DIR$/src/commands/command.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/RichMan_Ruby_Mechanism.iml" afterPath="$PROJECT_DIR$/.idea/RichMan_Ruby_Mechanism.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/responses/say_yes_to_upgrade.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/status/wait_for_upgrade_response.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/roll_cmd_own_land_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commands/roll_cmd.rb" afterPath="$PROJECT_DIR$/src/commands/roll_cmd.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/places/empty_land.rb" afterPath="$PROJECT_DIR$/src/places/empty_land.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player.rb" afterPath="$PROJECT_DIR$/src/player.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/responses/responses.rb" afterPath="$PROJECT_DIR$/src/responses/responses.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/responses/say_yes_to_buy.rb" afterPath="$PROJECT_DIR$/src/responses/say_yes_to_buy.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/status/status.rb" afterPath="$PROJECT_DIR$/src/status/status.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/status/wait_for_cmd.rb" afterPath="$PROJECT_DIR$/src/status/wait_for_cmd.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/command_test.rb" afterPath="$PROJECT_DIR$/test/command_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/roll_cmd_empty_land_test.rb" afterPath="$PROJECT_DIR$/test/roll_cmd_empty_land_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_suite.rb" afterPath="$PROJECT_DIR$/test/test_suite.rb" />
     </list>
     <ignored path="RichMan_Ruby_Mechanism.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +32,7 @@
     <SUITE FILE_PATH="coverage/RichMan_Ruby_Mechanism@test_should_wait_for_buy_response_after_roll_to_emptyland__RichMan_Ruby_Mechanism.coverage" NAME="test_should_wait_for_buy_response_after_roll_to_emptyland: RichMan_Ruby_Mechanism Coverage Results" MODIFIED="1479314889973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="RichMan_Ruby_Mechanism" />
     <SUITE FILE_PATH="coverage/RichMan_Ruby_Mechanism@Run_test__roll_cmd_empty_land_test___RichMan_Ruby_Mechanism.coverage" NAME="Run test 'roll_cmd_empty_land_test': RichMan_Ruby_Mechanism Coverage Results" MODIFIED="1479322693781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="RichMan_Ruby_Mechanism" />
     <SUITE FILE_PATH="coverage/RichMan_Ruby_Mechanism@All_tests_in_test__RichMan_Ruby_Mechanism.coverage" NAME="All tests in test: RichMan_Ruby_Mechanism Coverage Results" MODIFIED="1479357622434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="RichMan_Ruby_Mechanism" />
-    <SUITE FILE_PATH="coverage/RichMan_Ruby_Mechanism@test_suite.coverage" NAME="test_suite Coverage Results" MODIFIED="1479359438822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="RichMan_Ruby_Mechanism" />
+    <SUITE FILE_PATH="coverage/RichMan_Ruby_Mechanism@test_suite.coverage" NAME="test_suite Coverage Results" MODIFIED="1479362906732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="RichMan_Ruby_Mechanism" />
     <SUITE FILE_PATH="coverage/RichMan_Ruby_Mechanism@test_runner.coverage" NAME="test_runner Coverage Results" MODIFIED="1479304294523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="RichMan_Ruby_Mechanism" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -52,31 +44,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="responses.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/responses/responses.rb">
+      <file leaf-file-name="roll_cmd_own_land_test.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/roll_cmd_own_land_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+            <state relative-caret-position="-323">
+              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="roll_cmd_empty_land_test.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/roll_cmd_empty_land_test.rb">
+      <file leaf-file-name="empty_land.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/places/empty_land.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_suite.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_suite.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            <state relative-caret-position="465">
+              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -85,38 +67,18 @@
       <file leaf-file-name="player.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/player.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="345">
+              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wait_for_buy_response.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/status/wait_for_buy_response.rb">
+      <file leaf-file-name="say_yes_to_buy.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/responses/say_yes_to_buy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="status.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/status/status.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="turn_end.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/status/turn_end.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -132,11 +94,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="say_yes_to_buy.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/responses/say_yes_to_buy.rb">
+      <file leaf-file-name="say_yes_to_upgrade.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/responses/say_yes_to_upgrade.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wait_for_cmd.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/status/wait_for_cmd.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wait_for_buy_response.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/status/wait_for_buy_response.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="14" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wait_for_upgrade_response.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/status/wait_for_upgrade_response.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -177,26 +169,29 @@
         <option value="$PROJECT_DIR$/src/command/roll_cmd.rb" />
         <option value="$PROJECT_DIR$/src/response/say_yes_to_buy.rb" />
         <option value="$PROJECT_DIR$/src/response/response.rb" />
-        <option value="$PROJECT_DIR$/test/test_helper.rb" />
         <option value="$PROJECT_DIR$/src/status/wait_for_cmd.rb" />
         <option value="$PROJECT_DIR$/src/status/turn_end.rb" />
         <option value="$PROJECT_DIR$/src/status/statu.rb" />
         <option value="$PROJECT_DIR$/src/responses/say_no.rb" />
         <option value="$PROJECT_DIR$/src/places/place.rb" />
-        <option value="$PROJECT_DIR$/src/commands/roll_cmd.rb" />
-        <option value="$PROJECT_DIR$/src/places/empty_land.rb" />
         <option value="$PROJECT_DIR$/src/game_map.rb" />
         <option value="$PROJECT_DIR$/src/commands/command.rb" />
         <option value="$PROJECT_DIR$/src/responses/response.rb" />
-        <option value="$PROJECT_DIR$/src/responses/say_yes_to_buy.rb" />
-        <option value="$PROJECT_DIR$/src/status/status.rb" />
-        <option value="$PROJECT_DIR$/test/test_suite.rb" />
         <option value="$PROJECT_DIR$/test/command_test.rb" />
-        <option value="$PROJECT_DIR$/src/responses/responses.rb" />
         <option value="$PROJECT_DIR$/src/responses/wrong_cmd.rb" />
         <option value="$PROJECT_DIR$/src/status/wait_for_buy_response.rb" />
-        <option value="$PROJECT_DIR$/src/player.rb" />
+        <option value="$PROJECT_DIR$/test/test_suite.rb" />
+        <option value="$PROJECT_DIR$/src/status/status.rb" />
+        <option value="$PROJECT_DIR$/src/commands/roll_cmd.rb" />
+        <option value="$PROJECT_DIR$/src/responses/responses.rb" />
+        <option value="$PROJECT_DIR$/test/test_helper.rb" />
         <option value="$PROJECT_DIR$/test/roll_cmd_empty_land_test.rb" />
+        <option value="$PROJECT_DIR$/src/responses/say_yes_to_buy.rb" />
+        <option value="$PROJECT_DIR$/src/status/wait_for_upgrade_response.rb" />
+        <option value="$PROJECT_DIR$/src/player.rb" />
+        <option value="$PROJECT_DIR$/src/places/empty_land.rb" />
+        <option value="$PROJECT_DIR$/test/roll_cmd_own_land_test.rb" />
+        <option value="$PROJECT_DIR$/src/responses/say_yes_to_upgrade.rb" />
       </list>
     </option>
   </component>
@@ -209,6 +204,25 @@
   <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Ruby</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>RubyResolve</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -656,7 +670,7 @@
       <option name="presentableId" value="Default" />
       <updated>1479298946204</updated>
       <workItem from="1479298947711" duration="10027000" />
-      <workItem from="1479314635943" duration="15550000" />
+      <workItem from="1479314635943" duration="18791000" />
     </task>
     <servers />
   </component>
@@ -693,7 +707,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25577000" />
+    <option name="totallyTimeSpent" value="28818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -863,58 +877,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/places/empty_land.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/places/place.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="5" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/roll_cmd.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" selection-start-line="5" selection-start-column="2" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commands/command.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game_map.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/status/wait_for_cmd.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -935,18 +901,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/responses/responses.rb">
+    <entry file="file://$PROJECT_DIR$/test/test_suite.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="150">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/status/status.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/command.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/roll_cmd.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/roll_cmd_empty_land_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/responses/responses.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game_map.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/status/wait_for_cmd.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -959,10 +981,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/status/wait_for_buy_response.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/places/empty_land.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/status/wait_for_upgrade_response.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/responses/say_yes_to_buy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="165">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -975,34 +1029,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/status/wait_for_buy_response.rb">
+    <entry file="file://$PROJECT_DIR$/src/responses/say_yes_to_upgrade.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player.rb">
+    <entry file="file://$PROJECT_DIR$/test/roll_cmd_own_land_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/roll_cmd_empty_land_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_suite.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        <state relative-caret-position="-323">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
           <folding />
         </state>
       </provider>

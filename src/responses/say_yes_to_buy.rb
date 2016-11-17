@@ -9,9 +9,9 @@ class SAY_YES_TO_BUY
   end
 
   def execute
-    place = @player.game_map.get_place @player.position
+    place = @player.place
     if @player.money > place.price
-      @player.set_money  (@player.money - place.price)
+      @player.set_money (@player.money - place.price)
       @player.places << place
       place.set_owner @player
     end

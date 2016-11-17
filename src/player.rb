@@ -57,4 +57,8 @@ class Player
     @statu.wrong_cmd(self)
   end
 
+  def place
+    game_map.get_place position
+  end
+
 end

@@ -13,36 +13,36 @@ class RollCmd_EmptyLandTest < Test::Unit::TestCase
 
   def setup
     @player = Player.new flexmock(GameMap)
-    @empty_land = EmptyLand.new $LAND_PRICE
+    @empty_land = EmptyLand.new TestHelper::LAND_PRICE
     flexmock(GameMap, :get_place => @empty_land)
   end
 
   def test_should_wait_for_buy_response_after_roll_to_emptyland
     @player.set_statu Status::WAIT_FOR_CMD
 
-    assert_equal Status::WAIT_FOR_BUY_RESPONSE, (@player.command Command::ROLL_CMD)
+    assert_equal Status::WAIT_FOR_BUY_RESPONSE, (@player.command (Command::ROLL_CMD.set_player @player))
   end
 
 
   def test_should_turn_end_after_sayYes
     @player.set_statu Status::WAIT_FOR_BUY_RESPONSE
-    @player.set_money $ENOUGH_MONEY
+    @player.set_money TestHelper::ENOUGH_MONEY
 
     assert_equal Status::TURN_END, (@player.command @player.say_yes)
   end
 
   def test_should_change_money_after_sayYes
     @player.set_statu Status::WAIT_FOR_BUY_RESPONSE
-    @player.set_money $ENOUGH_MONEY
+    @player.set_money TestHelper::ENOUGH_MONEY
 
     @player.command @player.say_yes
 
-    assert_equal $ENOUGH_MONEY - $LAND_PRICE, @player.money
+    assert_equal TestHelper::ENOUGH_MONEY - TestHelper::LAND_PRICE, @player.money
   end
 
   def test_should_add_land_after_sayYes
     @player.set_statu Status::WAIT_FOR_BUY_RESPONSE
-    @player.set_money $ENOUGH_MONEY
+    @player.set_money TestHelper::ENOUGH_MONEY
     places_num = @player.places_num
 
     @player.command @player.say_yes
@@ -52,7 +52,7 @@ class RollCmd_EmptyLandTest < Test::Unit::TestCase
 
   def test_should_change_land_owner_after_sayYes
     @player.set_statu Status::WAIT_FOR_BUY_RESPONSE
-    @player.set_money $ENOUGH_MONEY
+    @player.set_money TestHelper::ENOUGH_MONEY
 
     @player.command @player.say_yes
 
