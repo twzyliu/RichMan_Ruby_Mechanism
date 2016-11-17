@@ -7,6 +7,7 @@ class Player
     @point = 0
     @position = 0
     @god_days = 0
+    @prison_days = 0
     @game_map = game_map
     @places = []
   end
@@ -87,8 +88,16 @@ class Player
     @god_days
   end
 
-  def set_god_days(god_days)
-    @god_days = god_days
+  def gain_god
+    @god_days += place.gift_god
+  end
+
+  def prison_days
+    @prison_days
+  end
+
+  def goto_prison
+    @prison_days += place.prison_days
   end
 
 end
