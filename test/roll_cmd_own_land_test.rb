@@ -8,9 +8,10 @@ require_relative '../src/places/empty_land'
 class RollCmd_OwnLandTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @empty_land = EmptyLand.new TestHelper::LAND_PRICE
     @empty_land.set_owner @player
+    flexmock(GameMap, :move => @empty_land)
     flexmock(GameMap, :place => @empty_land)
   end
 

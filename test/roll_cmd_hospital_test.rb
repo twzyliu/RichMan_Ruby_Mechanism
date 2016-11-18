@@ -9,9 +9,9 @@ require_relative '../src/places/hospital'
 class RollCmd_HospitalTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @hospital = Hospital.new
-    flexmock(GameMap, :place => @hospital)
+    flexmock(GameMap, :move => @hospital)
   end
 
   def test_should_turn_end_after_roll_to_hospital

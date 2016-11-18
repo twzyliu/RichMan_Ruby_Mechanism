@@ -9,8 +9,9 @@ require_relative '../src/places/gift_land'
 class RollCmd_GiftLandTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @gift_land = GiftLand.new
+    flexmock(GameMap, :move => @gift_land)
     flexmock(GameMap, :place => @gift_land)
   end
 

@@ -9,11 +9,11 @@ require_relative '../src/places/empty_land'
 class RollCmd_OthersLandTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
-    @other = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
+    @other = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @others_land = EmptyLand.new TestHelper::LAND_PRICE
     @others_land.set_owner (@other)
-    flexmock(GameMap, :place => @others_land)
+    flexmock(GameMap, :move => @others_land)
   end
 
   def test_should_turn_end_after_roll_to_other

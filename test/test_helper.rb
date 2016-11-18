@@ -1,6 +1,7 @@
 
 module TestHelper
 
+  PLAYER_NAME = 'A'
   ENOUGH_MONEY = 99999
   ENOUGH_POINT = 99999
   LAND_PRICE = 200
@@ -9,5 +10,8 @@ module TestHelper
   ENOUGH_TOOLS = 5
   LONG_STEP = 20
   SELL_NUM = 1
+  STARTING_POINT_NUM = 0
+  INIT_MONEY = 10000
+  PLAYER_NAMES = %w(A B)
 
 end

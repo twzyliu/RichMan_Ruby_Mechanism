@@ -9,9 +9,9 @@ require_relative '../src/places/magic_land'
 class RollCmd_MagicLandTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @magic_land = MagicLand.new
-    flexmock(GameMap, :place => @magic_land)
+    flexmock(GameMap, :move => @magic_land)
   end
 
   def test_should_turn_end_after_roll_to_magicland

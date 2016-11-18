@@ -1,12 +1,11 @@
 require_relative '../status/status'
 require_relative 'commands'
 require_relative 'command'
-require_relative '../player'
 
-class RollCmd < Command
+class RichCmd < Command
 
   def execute
-    @player.roll.change_statu @player
+    Status::WAIT_FOR_INIT_MONEY
   end
 
 end

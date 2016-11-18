@@ -9,8 +9,9 @@ require_relative '../src/places/prison'
 class RollCmd_PrisonTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @prison = Prison.new
+    flexmock(GameMap, :move => @prison)
     flexmock(GameMap, :place => @prison)
   end
 

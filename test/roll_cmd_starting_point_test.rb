@@ -9,9 +9,9 @@ require_relative '../src/places/starting_point'
 class RollCmd_StartingPointTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @starting_point = StartingPoint.new
-    flexmock(GameMap, :place => @starting_point)
+    flexmock(GameMap, :move => @starting_point)
   end
 
   def test_should_turn_end_after_roll_to_startingpoint

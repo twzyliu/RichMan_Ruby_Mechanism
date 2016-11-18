@@ -12,8 +12,9 @@ require_relative '../src/game_map'
 class RollCmd_EmptyLandTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @empty_land = EmptyLand.new TestHelper::LAND_PRICE
+    flexmock(GameMap, :move => @empty_land)
     flexmock(GameMap, :place => @empty_land)
   end
 

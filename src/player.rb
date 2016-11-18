@@ -2,17 +2,20 @@ require_relative 'commands/commands'
 require_relative 'tools/barricade'
 require_relative 'tools/robot'
 require_relative 'tools/bomb'
+require_relative 'game_map'
 
 class Player
 
   MAX_TOOLS_NUM = 10
 
-  def initialize(game_map)
+  def initialize(name,game_map)
+    @name = name
     @money = 0
     @point = 0
     @position = 0
     @god_days = 0
     @prison_days = 0
+    @hospital_days = 0
     @game_map = game_map
     @places = []
     @barricade = Barricade.new
@@ -78,6 +81,10 @@ class Player
     @position
   end
 
+  def set_position(position)
+    @position = position
+  end
+
   def places_num
     @places.size
   end
@@ -95,7 +102,7 @@ class Player
   end
 
   def place
-    game_map.place position
+    @game_map.place position
   end
 
   def god_days
@@ -138,7 +145,18 @@ class Player
     @tools
   end
 
+  def roll
+    @game_map.move self
+  end
 
+  def goto_hospital(hospital_position)
+    @position = hospital_position
+    @hospital_days = place.hospital_days
+    @position
+  end
 
+  def hospital_days
+    @hospital_days
+  end
 
 end

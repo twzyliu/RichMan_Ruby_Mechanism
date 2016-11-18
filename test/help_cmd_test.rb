@@ -9,7 +9,7 @@ require_relative '../src/player'
 class HelpCmdTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
   end
 
   def test_should_wait_for_cmd_after_help

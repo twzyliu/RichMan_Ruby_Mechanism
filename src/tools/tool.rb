@@ -33,4 +33,8 @@ class Tool
     end
   end
 
+  def work(player, position, hospital_position)
+
+  end
+
 end

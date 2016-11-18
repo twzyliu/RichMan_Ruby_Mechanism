@@ -11,9 +11,9 @@ require_relative '../src/tools/barricade'
 class RollCmd_ToolsLandTest < Test::Unit::TestCase
 
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @tools_land = ToolsLand.new
-    flexmock(GameMap, :place => @tools_land)
+    flexmock(GameMap, :move => @tools_land)
   end
 
   def test_should_wait_for_tool_response_after_roll_to_toolland

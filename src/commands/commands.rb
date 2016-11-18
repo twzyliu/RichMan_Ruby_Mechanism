@@ -7,6 +7,7 @@ require_relative 'selltool_cmd'
 require_relative 'query_cmd'
 require_relative 'help_cmd'
 require_relative 'quit_cmd'
+require_relative 'rich_cmd'
 
 module Commands
 
@@ -19,5 +20,6 @@ module Commands
   QUERY_CMD = QueryCmd.new
   HELP_CMD = HelpCmd.new
   QUIT_CMD = QuitCmd.new
+  RICH_CMD = RichCmd.new
 
 end

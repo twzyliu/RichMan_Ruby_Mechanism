@@ -18,6 +18,8 @@ require_relative 'selltool_cmd_test'
 require_relative 'query_cmd_test'
 require_relative 'help_cmd_test'
 require_relative 'quit_cmd_test'
+require_relative 'game_test'
+require_relative 'rich_cmd_test'
 
 class Test_Suite
   def self.suite
@@ -41,6 +43,8 @@ class Test_Suite
     suite << QueryCmdTest.suite
     suite << HelpCmdTest.suite
     suite << QuitCmdTest.suite
+    suite << GameTest.suite
+    suite << RichCmdTest.suite
     return suite
   end
 end

@@ -6,12 +6,14 @@ require_relative '../src/commands/commands'
 require_relative '../src/responses/responses'
 require_relative '../src/status/status'
 require_relative '../src/game_map'
+require_relative 'test_helper'
 
 
 class Command_Test < Test::Unit::TestCase
 
+
   def setup
-    @player = Player.new flexmock(GameMap)
+    @player = Player.new TestHelper::PLAYER_NAME, flexmock(GameMap)
     @command = Command.new
     @response = Response.new
   end
